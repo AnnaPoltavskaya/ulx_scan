@@ -1,7 +1,8 @@
-.idea/
+*.idea/
 target/
 *.txt
 out/
 .env
+*.DS_Store/
 *.DS_Store
 src/main/resources/

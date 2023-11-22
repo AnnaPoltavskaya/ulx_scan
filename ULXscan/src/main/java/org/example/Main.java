@@ -27,6 +27,7 @@ public class Main {
     static String BASE_URL = "https://ulxscan.com/nft/staking-hub/id/";
     // PTPIF - path to package Id's file
     static String PTPIF = dotenv.get("PTPIF");
+    static String CHROME_D = dotenv.get("CHROME_DRIVER_LOCATION");
     static int WAIT = 10;
     static String RESULT_BASE_DIRECTORY = dotenv.get("RESULT_BASE_DIRECTORY");
     static String METADATA_GRID_FILE_NAME = "MetaData.json";
@@ -94,7 +95,7 @@ public class Main {
         ChromeOptions opt = new ChromeOptions();
         opt.addArguments("headless");
         opt.addArguments("--remote-allow-origins=*");
-        System.setProperty("webdriver.chrome.driver","/Users/anna/chromedriver-mac-arm64/chromedriver");
+        System.setProperty("webdriver.chrome.driver",CHROME_D);
         WebDriver driver = new ChromeDriver(opt);
         driver.get(targetURL);
         driver.manage().window().maximize();
